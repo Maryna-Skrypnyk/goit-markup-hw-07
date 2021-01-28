@@ -1,16 +1,7 @@
-@mixin transit-a($prop-a) {
-  transition: $prop-a $primary-duration $timing-function;
-}
-
-@mixin transit-b($prop-a, $prop-b) {
-  transition: $prop-a $primary-duration $timing-function,
-    $prop-b $primary-duration $timing-function;
-}
-
-@mixin transit-c($prop-a, $prop-b, $prop-c) {
-  transition: $prop-a $primary-duration $timing-function,
-    $prop-b $primary-duration $timing-function,
-    $prop-c $primary-duration $timing-function;
+@mixin transit($property...) {
+  transition-property: $property;
+  transition-duration: $primary-duration;
+  transition-timing-function: $timing-function;
 }
 
 @mixin title-section() {

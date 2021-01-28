@@ -33,7 +33,7 @@
   background-color: $primary-white-color;
   filter: none;
 
-  @include transit-c(color, background-color, filter);
+  @include transit(color, background-color, filter);
 
   outline: transparent;
 

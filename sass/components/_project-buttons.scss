@@ -29,7 +29,7 @@
   letter-spacing: 0.03em;
   box-shadow: none;
 
-  @include transit-c(color, background-color, box-shadow);
+  @include transit(color, background-color, box-shadow);
 
   &:hover,
   &:focus {

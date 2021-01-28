@@ -32,7 +32,7 @@
   line-height: 1.14;
   letter-spacing: 0.02em;
   color: $primary-text-color;
-  @include transit-a(color);
+  @include transit(color);
 
   &:hover,
   &:focus {

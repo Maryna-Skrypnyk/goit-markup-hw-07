@@ -46,7 +46,7 @@
   color: $title-text-color;
   border-radius: $border-radius-button;
   @include bordered(rgba(33, 33, 33, 0.2));
-  @include transit-a(border-color);
+  @include transit(border-color);
 
   outline: transparent;
   cursor: pointer;
@@ -76,7 +76,7 @@
   left: 12px;
   cursor: pointer;
   fill: $title-text-color;
-  @include transit-a(fill);
+  @include transit(fill);
 
   .form-modal__label:focus-within & {
     fill: $accent-color;
@@ -124,7 +124,7 @@
   background-color: $primary-white-color;
   /* background-image: url(../images/svg/vector.svg); */
 
-  @include transit-b(background-color, border-color);
+  @include transit(background-color, border-color);
 
   .form-modal__check:checked ~ & {
     width: 16px;

@@ -17,7 +17,7 @@
   font-weight: $secondary-font-weight;
   line-height: 1.14;
   letter-spacing: 0.02em;
-  @include transit-a(color);
+  @include transit(color);
 
   &:hover,
   &:focus {

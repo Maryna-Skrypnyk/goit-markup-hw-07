@@ -45,7 +45,7 @@
   border-radius: 50%;
   color: $primary-white-color;
   background-color: $network-bg-color;
-  @include transit-a(background-color);
+  @include transit(background-color);
 
   outline: transparent;
 
