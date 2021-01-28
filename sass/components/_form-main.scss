@@ -11,7 +11,12 @@
     line-height: 1.15;
   }
 
-  & .form-modal__button {
+  &__checkbox {
+    position: relative;
+    margin-bottom: 30px;
+  }
+
+  &__button {
     text-align: center;
   }
 }
@@ -22,33 +27,29 @@
   flex-direction: column;
   margin-bottom: 10px;
 
-  & .form-modal__content-label {
-    padding-bottom: 4px;
-
-    font-size: 12px;
-    font-weight: $primary-font-weight;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
-  }
-
   &--comment {
     margin-bottom: 20px;
   }
 }
 
+.form-modal__content-label {
+  padding-bottom: 4px;
+
+  font-size: 12px;
+  font-weight: $primary-font-weight;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
+}
+
 .form-modal__input {
   padding: 12px 12px 12px 42px;
   color: $title-text-color;
-  @include bordered(rgba(33, 33, 33, 0.2));
   border-radius: $border-radius-button;
-  transition: border-color $primary-duration $timing-function;
+  @include bordered(rgba(33, 33, 33, 0.2));
+  @include transit-a(border-color);
 
   outline: transparent;
   cursor: pointer;
-
-  .form-modal__label:focus-within & {
-    border-color: $accent-color;
-  }
 
   &--comment {
     resize: none;
@@ -57,23 +58,25 @@
     padding: 12px 16px;
   }
 
-  &--comment::placeholder {
-    color: rgba(117, 117, 117, 0.5);
-    font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.01em;
+  .form-modal__label:focus-within & {
+    border-color: $accent-color;
   }
+}
+
+.form-modal__input--comment::placeholder {
+  color: rgba(117, 117, 117, 0.5);
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: 0.01em;
 }
 
 .form-modal__icon {
   position: absolute;
   top: 50%;
   left: 12px;
-
-  fill: $title-text-color;
-  transition: fill $primary-duration $timing-function;
-
   cursor: pointer;
+  fill: $title-text-color;
+  @include transit-a(fill);
 
   .form-modal__label:focus-within & {
     fill: $accent-color;
@@ -91,11 +94,6 @@
   overflow: hidden;
 }
 
-.form-modal__checkbox {
-  position: relative;
-  margin-bottom: 30px;
-}
-
 .form-modal__label-check {
   display: inline-block;
   padding-right: 11px;
@@ -103,7 +101,7 @@
 
   font-weight: $primary-font-weight;
 
-  & .form-modal__link {
+  .form-modal__link {
     text-decoration-line: underline;
     color: $accent-color;
   }
@@ -126,17 +124,16 @@
   background-color: $primary-white-color;
   /* background-image: url(../images/svg/vector.svg); */
 
-  transition: background-color $primary-duration $timing-function,
-    border-color $primary-duration $timing-function;
+  @include transit-b(background-color, border-color);
 
   .form-modal__check:checked ~ & {
     width: 16px;
     height: 15px;
     background-color: $accent-color;
+    border-color: $accent-color;
     background-image: url(../images/svg/check.svg);
     background-size: contain;
     background-origin: border-box;
-    border-color: $accent-color;
 
     border-radius: 2px;
   }
