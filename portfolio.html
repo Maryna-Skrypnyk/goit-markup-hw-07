@@ -4,22 +4,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Web Studio</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"/>
-    <link rel="stylesheet" href="./css/styles.css">
+    <link rel="stylesheet" href="./css/main.min.css">
 </head>
 
 <body>
     <!--Шапка сайта-->
-    <header class="header">
+    <header class="header-portfolio">
         <div class="container container--header">
             <nav class="main-nav">
                 <a href="./index.html" class="logo">
-                    Web<span class="logo logo--header">Studio</span>
+                    Web<span class="logo__header">Studio</span>
                 </a>
-                <ul class="list main-nav__list">
+                <ul class="main-nav__list">
                     <li class="main-nav__item">
                         <a href="./index.html" class="main-nav__link">Студия</a>
                     </li>
@@ -32,7 +28,7 @@
                 </ul>
             </nav>
             <address class="contacts-header">
-                <ul class="list contacts-header__list">
+                <ul class="contacts-header__list">
                     <li class="contacts-header__item contacts-header__item--mail">
                         <a href="mailto:info@devstudio.com" class="contacts-header__link">
                             <svg class="contacts-header__icon  contacts-header__icon--envelope" width="16" height="12">
@@ -55,18 +51,18 @@
     </header>
 
     <main>
-        <section class="section section--projects">
+        <section class="section-projects">
             <h1 class="overlay__title visually-hidden">Портфолио</h1>
                 <div class="container container--projects">
                     <h2 class="section__title visually-hidden">Наши проекты</h2>
-                        <ul class="list project-button-list">
+                        <ul class="project-button-list">
                             <li class="project-button-list__item"><button type="button" class="project-button-list__button">Все</button></li>
                             <li class="project-button-list__item"><button type="button" class="project-button-list__button">Веб-сайты</button></li>
                             <li class="project-button-list__item"><button type="button" class="project-button-list__button">Приложения</button></li>
                             <li class="project-button-list__item"><button type="button" class="project-button-list__button">Дизайн</button></li>
                             <li class="project-button-list__item"><button type="button" class="project-button-list__button">Маркетинг</button></li>
                         </ul>
-                        <ul class="list project-card-list">
+                        <ul class="project-card-list">
                             <li class="project">
                                 <a href="#" class="project__link">
                                     <div class="project__thumb">
@@ -234,11 +230,11 @@
         <div class="container container--footer">
             <div class="address-footer">
                 <a href="/" class="logo address-footer__logo">
-                    Web</span><span class="logo logo--footer">Studio</span>
+                    Web</span><span class="logo__footer">Studio</span>
                 </a>
                 <address class="address-footer__address">г. Киев, пр-т Леси Украинки, 26</address>
                 <address class="contact-footer">
-                    <ul class="list contact-footer__list">
+                    <ul class="contact-footer__list">
                         <li class="contact-footer__item"><a href="mailto:info@example.com"
                                 class="contact-footer__link">info@example.com</a></li>
                         <li class="contact-footer__item"><a href="tel:+380991111111" class="contact-footer__link">+38 099
@@ -249,7 +245,7 @@
     
             <div class="networks">
                 <p class="networks__content">Присоединяйтесь</p>
-                <ul class="list networks-list">
+                <ul class="networks-list">
                     <li class="networks-list__item">
                         <a href="#" class="networks-list__link">
                             <svg class="networks-list__icon">
@@ -286,7 +282,7 @@
                 <form class="subscribe-form">
                     <input type="email" name="mail" placeholder="E-mail" class="subscribe-form__input" />
     
-                    <button type="submit" class="button button--subscribe">
+                    <button type="submit" class="button-subscribe">
                         <span class="button__content">Подписаться</span>
                         <svg class="button__icon" width="24" height="24">
                             <use href="./images/svg/sprite.svg#icon-subscribe"></use>
